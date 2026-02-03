@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Bhangra Academy Receptionist Chat</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <div>
+          <p class="app__eyebrow">The Bhangra Academy</p>
+          <h1>Receptionist Chat</h1>
+          <p class="app__subtitle">2023 Williams Pkwy #4, Brampton, Ontario</p>
+        </div>
+        <div class="app__status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Online now
+        </div>
+      </header>
+
+      <section class="chat" aria-live="polite" aria-atomic="false">
+        <div class="chat__message chat__message--bot">
+          <p class="chat__name">Receptionist</p>
+          <div class="chat__bubble">
+            <p>
+              Sure thing! Welcome to The Bhangra Academy. I can help with class
+              schedules, pricing ranges, and enrollment. How can I help today?
+            </p>
+          </div>
+          <p class="chat__timestamp">Just now</p>
+        </div>
+      </section>
+
+      <form class="composer" autocomplete="off">
+        <label class="composer__label" for="message">
+          Type your message or use the mic
+        </label>
+        <div class="composer__controls">
+          <input
+            id="message"
+            name="message"
+            type="text"
+            placeholder="Ask about classes, availability, or pricing..."
+            required
+          />
+          <button type="button" class="composer__mic" aria-pressed="false">
+            🎤
+            <span>Speak</span>
+          </button>
+          <button type="submit">Send</button>
+        </div>
+        <p class="composer__hint">
+          Friendly, conversational responses. Pricing is always a range.
+          <span class="composer__support"></span>
+        </p>
+      </form>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
